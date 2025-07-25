@@ -657,3 +657,46 @@ body.menu-open {
 @media (min-width: 701px) {
   .menu-blur-bg { display: none !important; }
 }
+
+/* ------- CLIMA REGIONAL ------- */
+.clima-section {
+  background: var(--color-card);
+  box-shadow: var(--sombra-suave);
+  border-radius: var(--borde-radius);
+  padding: 1.5em 1em 2em 1em;
+  margin: 2em auto;
+  max-width: 1100px;
+  text-align: center;
+}
+.clima-section h2 {
+  margin-top: 0;
+  color: var(--color-secundario);
+  font-family: var(--font-title);
+}
+.weather-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  justify-content: center;
+  margin-top: 1em;
+}
+.weather-card {
+  background: var(--color-fondo);
+  border-radius: var(--borde-radius);
+  box-shadow: var(--sombra-suave);
+  padding: 0.8em 0.6em;
+  flex: 1 1 150px;
+  max-width: 180px;
+}
+.weather-card h3 {
+  margin: 0 0 .3em 0;
+  font-size: 1em;
+  color: var(--color-principal);
+}
+.weather-card p {
+  margin: 0.2em 0;
+  font-size: 0.95em;
+}
+@media (max-width: 700px) {
+  .weather-card { max-width: 45%; }
+}
