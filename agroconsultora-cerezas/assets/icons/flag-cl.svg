@@ -1,0 +1,7 @@
+<!-- assets/icons/flag-es.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="22" viewBox="0 0 32 22">
+  <rect width="32" height="11" y="0" fill="#fff"/>
+  <rect width="32" height="11" y="11" fill="#d52b1e"/>
+  <rect width="11" height="11" fill="#0033a0"/>
+  <polygon points="5.5,3 6.42,6.19 9.83,6.19 7.04,8.01 7.96,11.2 5.5,9.13 3.04,11.2 3.96,8.01 1.17,6.19 4.58,6.19" fill="#fff"/>
+</svg>
