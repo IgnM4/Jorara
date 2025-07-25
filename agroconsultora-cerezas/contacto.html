@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto – Jorara Consultorías Agrícolas</title>
+  <meta name="description" content="Contáctanos para asesorías, proyectos o capacitaciones en cerezas y kiwis. Atención rápida y personalizada para productores y exportadores en Chile y el mundo.">
+  <meta property="og:title" content="Contacto – Jorara Consultorías Agrícolas">
+  <meta property="og:description" content="¿Listo para potenciar tu producción agrícola? Escríbenos y responderemos en menos de 24 horas.">
+  <meta property="og:image" content="assets/img/hero-cerezas-jorara.webp">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/img/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="css/estilos.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans:400,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <nav class="navbar">
+  <div class="logo">
+    <img src="assets/img/logo-cerezas.png" alt="Jorara logo" loading="lazy">
+    <span>Jorara Consultorías</span>
+  </div>
+
+  <!-- Botón hamburguesa -->
+  <button class="hamburger" id="hamburger-btn" aria-label="Abrir menú">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Menú de navegación -->
+  <ul class="nav-links" id="main-menu">
+    <li><a href="index.html" class="active">Inicio</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="proyectos.html">Proyectos</a></li>
+    <li><a href="noticias.html">Noticias</a></li>
+    <li><a href="contacto.html">Contacto</a></li>
+    <li>
+      <div class="lang-switcher">
+        <img src="assets/icons/flag-cl.svg" alt="Español (Chile)">
+        <img src="assets/icons/flag-en.svg" alt="English">
+      </div>
+    </li>
+    <li><a href="contacto.html" class="btn-principal">Solicitar Asesoría</a></li>
+  </ul>
+  <!-- Fondo de blur para el menú hamburguesa -->
+  <div class="menu-blur-bg" id="menu-blur-bg"></div>
+</nav>
+
+  </header>
+
+  <!-- CONTACTO -->
+  <section class="servicios-destacados fade-in">
+    <h1>¿Listo para transformar tu negocio?</h1>
+    <p style="max-width:550px; margin:auto; text-align:center;">
+      Envía tu consulta, agenda una reunión o solicita información.<br>
+      <strong>¡Respondemos en menos de 24 horas!</strong>
+    </p>
+    <div style="text-align:center; margin-top:2rem;">
+      <a href="https://wa.me/569XXXXXXXX" target="_blank" class="btn-hero" style="background:#25D366;">Hablar por WhatsApp</a>
+    </div>
+    <form id="contact-form" action="mailto:info@jorara.cl" method="POST" enctype="text/plain" style="max-width:420px;margin:2rem auto 1.5rem auto; background:#fff; border-radius:14px; box-shadow:0 2px 12px #0001; padding:2rem;">
+      <label for="name">Nombre:<br>
+        <input type="text" id="name" name="name" required style="width:100%;padding:0.5rem;">
+      </label>
+      <label for="company">Empresa:<br>
+        <input type="text" id="company" name="company" style="width:100%;padding:0.5rem;">
+      </label>
+      <label for="email">Email:<br>
+        <input type="email" id="email" name="email" required style="width:100%;padding:0.5rem;">
+      </label>
+      <label for="phone">Teléfono:<br>
+        <input type="text" id="phone" name="phone" style="width:100%;padding:0.5rem;">
+      </label>
+      <label for="message">Mensaje:<br>
+        <textarea id="message" name="message" required rows="4" style="width:100%;padding:0.5rem;"></textarea>
+      </label>
+      <button type="submit" class="btn-principal" style="width:100%;">Enviar</button>
+    </form>
+    <div style="margin-top:2rem; text-align:center;">
+      <p>
+        <strong>Email:</strong> <a href="mailto:info@jorara.cl">info@jorara.cl</a><br>
+        <strong>WhatsApp:</strong> <a href="https://wa.me/569XXXXXXXX" target="_blank" aria-label="Escribir a Jorara por WhatsApp">+56 9 XXXXXXXX</a><br>
+        <strong>Ubicación:</strong> Santiago, Chile
+      </p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-container">
+      <div>
+        <img src="assets/img/logo-cerezas.png" alt="Logo Jorara" class="footer-logo" loading="lazy">
+        <p>&copy; 2025 Jorara Consultorías Agrícolas</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>Email: <a href="mailto:info@jorara.cl">info@jorara.cl</a></li>
+          <li>WhatsApp: <a href="https://wa.me/569XXXXXXXX" target="_blank" aria-label="Abrir chat de WhatsApp con Jorara">+56 9 XXXXXXXX</a></li>
+          <li>Santiago, Chile</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Redes</h4>
+        <ul>
+          <li><a href="#" aria-label="Ir a LinkedIn Jorara">LinkedIn</a></li>
+          <li><a href="#" aria-label="Ir a SmartCherry.cl">SmartCherry.cl</a></li>
+        </ul>
+      </div>
+    </div>
+    <div style="font-size:0.92em; color:#aaa; margin-top:1rem; text-align:center;">
+      <a href="privacidad.html" style="color:#aaa; text-decoration:underline;">Política de Privacidad</a> |
+      <a href="terminos.html" style="color:#aaa; text-decoration:underline;">Términos y Condiciones</a>
+      <br>
+      Sitio protegido por derechos de autor © 2025 Jorara Consultorías Agrícolas.
+    </div>
+  </footer>
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fade-in animation
+    const elems = document.querySelectorAll('.fade-in');
+    elems.forEach((el, i) => {
+      setTimeout(() => el.classList.add('visible'), 300 + i * 100);
+    });
+    // Validación moderna
+    const form = document.getElementById('contact-form');
+    if(form) {
+      form.setAttribute('novalidate', 'novalidate');
+      form.addEventListener('submit', function(e) {
+        let valid = true;
+        let email = form.querySelector('[name="email"]');
+        let message = form.querySelector('[name="message"]');
+        if(email && !/\S+@\S+\.\S+/.test(email.value)) {
+          email.style.borderColor = '#A82331';
+          valid = false;
+        } else if(email) {
+          email.style.borderColor = '';
+        }
+        if(message && message.value.trim().length < 10) {
+          message.style.borderColor = '#A82331';
+          valid = false;
+        } else if(message) {
+          message.style.borderColor = '';
+        }
+        if(!valid) {
+          e.preventDefault();
+          alert("Por favor completa correctamente los campos marcados en rojo.");
+        }
+      });
+    }
+  });
+  </script>
+</body>
+</html>
