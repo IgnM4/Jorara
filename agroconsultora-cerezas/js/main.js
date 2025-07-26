@@ -32,6 +32,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Carrusel auto deslizante para contenedores con clase .carousel en móvil
   const initCarousel = scroller => {
+    if (scroller.dataset.carouselInit) return; // evitar duplicar listeners
+    scroller.dataset.carouselInit = 'true';
+
     scroller.scrollLeft = 0;
     let rafId;
     const speed = 0.5; // píxeles por frame
@@ -54,7 +57,13 @@ document.addEventListener('DOMContentLoaded', () => {
     start();
   };
 
-  if (window.matchMedia('(max-width: 800px)').matches) {
+  const mq = window.matchMedia('(max-width: 800px)');
+  const enableCarousels = () => {
     document.querySelectorAll('.carousel').forEach(initCarousel);
-  }
+  };
+
+  if (mq.matches) enableCarousels();
+  mq.addEventListener('change', e => {
+    if (e.matches) enableCarousels();
+  });
 });

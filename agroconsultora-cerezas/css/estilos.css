@@ -504,6 +504,7 @@ footer a[aria-label] {
     flex-wrap: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
+    scroll-behavior: smooth;
     scroll-snap-type: x mandatory;
     gap: 1rem;
     padding-bottom: 1rem;
