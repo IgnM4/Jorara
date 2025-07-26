@@ -1,11 +1,12 @@
 :root {
-  --color-principal: #a82331;
-  --color-secundario: #00335a;
+  /* Paleta inspirada en cerezos y kiwis */
+  --color-principal: #d2042d; /* rojo cereza */
+  --color-secundario: #7cb518; /* verde kiwi */
   --color-fondo: #f7f7fa;
   --color-card: #fff;
   --color-texto: #232323;
-  --color-boton: #a82331;
-  --color-boton-hover: #7a1824;
+  --color-boton: #d2042d;
+  --color-boton-hover: #b00324;
   --color-amarillo: #ffc400;
   --color-azul: #0033a0;
   --color-footer: #18191a;
@@ -219,7 +220,7 @@ body {
 .card ul { padding-left: 1.1em; }
 .card:hover {
   transform: translateY(-7px) scale(1.025);
-  box-shadow: 0 8px 32px #a8233120, var(--sombra-suave);
+  box-shadow: 0 8px 32px #d2042d20, var(--sombra-suave);
 }
 .btn-link {
   color: var(--color-boton);
@@ -258,7 +259,7 @@ body {
   border-radius: 14px;
   text-align: center;
   padding: 1.1em .5em .7em .5em;
-  box-shadow: 0 1px 6px #a823310a;
+  box-shadow: 0 1px 6px #d2042d0a;
   color: var(--color-principal);
   font-weight: 700;
 }
@@ -281,7 +282,7 @@ body {
 .logos-clientes .item {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 1px 8px #00335a11;
+  box-shadow: 0 1px 8px #7cb51811;
   padding: 1.3em 1em;
   margin: .7em;
   flex: 1 1 260px;
@@ -503,12 +504,13 @@ textarea:focus {
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* Ajustes en modo oscuro para respetar la paleta cereza/kiwi */
     --color-fondo: #191a20;
     --color-card: #23242c;
-    --color-texto: #090808;
-    --color-boton: #d54b5e;
-    --color-boton-hover: #a82331;
-    --color-secundario: #88aaff;
+    --color-texto: #ececec;
+    --color-boton: #ff5777;
+    --color-boton-hover: #d2042d;
+    --color-secundario: #a4e75d;
     --color-footer: #141419;
     --color-amarillo: #ffd600;
     --sombra-suave: 0 3px 20px #0004;
@@ -641,7 +643,7 @@ textarea:focus {
   .btn-principal {
     margin-top: 12px;
     margin-left: 0;
-    box-shadow: 0 4px 20px #a8233125;
+    box-shadow: 0 4px 20px #d2042d25;
   }
 }
 

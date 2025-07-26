@@ -31,7 +31,7 @@
       </ul>
       <div class="lang-switcher">
         <a href="contacto.html"><img src="assets/icons/flag-es.svg" alt="Español" style="height:24px;vertical-align:middle;"></a>
-        <a href="contact.html"><img src="assets/icons/flag-en.svg" alt="English" style="height:24px;vertical-align:middle;margin-left:6px;filter:drop-shadow(0 0 2px #417505);"></a>
+        <a href="contact.html"><img src="assets/icons/flag-en.svg" alt="English" style="height:24px;vertical-align:middle;margin-left:6px;filter:drop-shadow(0 0 2px #7cb518);"></a>
       </div>
       <a href="contact.html" class="btn-principal">Request Consulting</a>
     </nav>
@@ -120,13 +120,13 @@
         let email = form.querySelector('[name="email"]');
         let message = form.querySelector('[name="message"]');
         if(email && !/\S+@\S+\.\S+/.test(email.value)) {
-          email.style.borderColor = '#A82331';
+          email.style.borderColor = '#d2042d';
           valid = false;
         } else if(email) {
           email.style.borderColor = '';
         }
         if(message && message.value.trim().length < 10) {
-          message.style.borderColor = '#A82331';
+          message.style.borderColor = '#d2042d';
           valid = false;
         } else if(message) {
           message.style.borderColor = '';
