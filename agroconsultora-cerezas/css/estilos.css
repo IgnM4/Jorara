@@ -386,6 +386,13 @@ form#contact-form button[type="submit"] {
   transform: translateY(28px);
   transition: opacity .8s cubic-bezier(.5,0,.1,1), transform .7s cubic-bezier(.5,0,.1,1);
 }
+
+@media (max-width: 700px) {
+  .fade-in {
+    transform: translateX(-28px);
+  }
+}
+
 .fade-in.visible {
   opacity: 1;
   transform: none;
