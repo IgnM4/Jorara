@@ -384,6 +384,7 @@ form#contact-form textarea:focus {
 }
 form#contact-form button[type="submit"] {
   margin-top: .9em;
+  margin-left: 0;
 }
 
 /* ANIMACIÓN FADE-IN */
