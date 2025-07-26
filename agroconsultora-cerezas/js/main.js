@@ -30,13 +30,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // Carrusel auto deslizante para tarjetas de servicios en móvil
-  const scroller = document.querySelector('.servicios-cards.carousel');
-  if (scroller && window.matchMedia('(max-width: 800px)').matches) {
+ // Carrusel auto deslizante para contenedores con clase .carousel en móvil
+  const initCarousel = scroller => {
+    if (scroller.dataset.carouselInit) return; // evitar duplicar listeners
+    scroller.dataset.carouselInit = 'true';
     scroller.scrollLeft = 0;
     let rafId;
     const speed = 0.5; // píxeles por frame
-
     const step = () => {
       scroller.scrollLeft += speed;
       if (scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
@@ -53,5 +53,15 @@ document.addEventListener('DOMContentLoaded', () => {
     scroller.addEventListener('mouseenter', stop);
     scroller.addEventListener('mouseleave', start);
     start();
-  }
+  };
+
+  const mq = window.matchMedia('(max-width: 800px)');
+  const enableCarousels = () => {
+    document.querySelectorAll('.carousel').forEach(initCarousel);
+  };
+
+  if (mq.matches) enableCarousels();
+  mq.addEventListener('change', e => {
+    if (e.matches) enableCarousels();
+  });
 });
