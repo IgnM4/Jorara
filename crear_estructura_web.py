@@ -8,8 +8,8 @@ Generado automáticamente con estructura profesional y diseño moderno.
 """
 
 contenido_css = """:root {
-    --cereza: #A82331;
-    --verde: #417505;
+    --cereza: #d2042d;
+    --verde: #7cb518;
     --blanco: #fff;
     --gris-claro: #f3f3f3;
     --negro: #1b1b1b;
