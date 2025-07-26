@@ -455,6 +455,7 @@ footer a[aria-label] {
 
 /* -------------------- RESPONSIVE ------------------- */
 @media (max-width: 950px) {
+  .servicios-cards,
   .diferenciadores,
   .logos-clientes,
   .blog-cards {
