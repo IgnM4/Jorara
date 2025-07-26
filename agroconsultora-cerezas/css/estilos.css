@@ -38,6 +38,20 @@ body {
   line-height: 1.65;
 }
 
+/* Banner con clima actual */
+.weather-banner {
+  background: var(--color-secundario);
+  color: #fff;
+  text-align: center;
+  font-family: var(--font-main);
+  padding: 0.35em 0;
+  font-size: 0.95em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+}
+
 /* --------------------- NAVBAR --------------------- */
 .navbar {
   width: 100%;
