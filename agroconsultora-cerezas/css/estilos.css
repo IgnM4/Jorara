@@ -455,7 +455,6 @@ footer a[aria-label] {
 
 /* -------------------- RESPONSIVE ------------------- */
 @media (max-width: 950px) {
-  .servicios-cards,
   .diferenciadores,
   .logos-clientes,
   .blog-cards {
@@ -497,6 +496,22 @@ footer a[aria-label] {
   }
   .footer-container {
     padding: 0 2vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .carousel {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+  .carousel > * {
+    flex: 0 0 80%;
+    max-width: 80%;
+    scroll-snap-align: center;
   }
 }
 

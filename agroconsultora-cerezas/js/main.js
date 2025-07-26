@@ -9,24 +9,52 @@ document.addEventListener('DOMContentLoaded', () => {
   const blurBg = document.getElementById('menu-blur-bg');
   const body = document.body;
 
-  if (!hamburger || !menu) return;
+  if (hamburger && menu) {
+    function toggleMenu() {
+      hamburger.classList.toggle('active');
+      menu.classList.toggle('open');
+      body.classList.toggle('menu-open');
+      if (blurBg) blurBg.classList.toggle('open');
+    }
 
-  function toggleMenu() {
-    hamburger.classList.toggle('active');
-    menu.classList.toggle('open');
-    body.classList.toggle('menu-open');
-    if (blurBg) blurBg.classList.toggle('open');
+    hamburger.addEventListener('click', toggleMenu);
+
+    // Cierra el menú al hacer clic en el fondo borroso
+    if (blurBg) blurBg.addEventListener('click', toggleMenu);
+
+    // Cierra el menú al seleccionar un enlace de navegación
+    menu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (menu.classList.contains('open')) toggleMenu();
+      });
+    });
   }
 
-  hamburger.addEventListener('click', toggleMenu);
+  // Carrusel auto deslizante para contenedores con clase .carousel en móvil
+  const initCarousel = scroller => {
+    scroller.scrollLeft = 0;
+    let rafId;
+    const speed = 0.5; // píxeles por frame
 
-  // Cierra el menú al hacer clic en el fondo borroso
-  if (blurBg) blurBg.addEventListener('click', toggleMenu);
+    const step = () => {
+      scroller.scrollLeft += speed;
+      if (scroller.scrollLeft >= scroller.scrollWidth - scroller.clientWidth) {
+        scroller.scrollLeft = 0;
+      }
+      rafId = requestAnimationFrame(step);
+    };
 
-  // Cierra el menú al seleccionar un enlace de navegación
-  menu.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (menu.classList.contains('open')) toggleMenu();
-    });
-  });
+    const start = () => { if (!rafId) rafId = requestAnimationFrame(step); };
+    const stop = () => { if (rafId) { cancelAnimationFrame(rafId); rafId = null; } };
+
+    scroller.addEventListener('pointerdown', stop, { passive: true });
+    scroller.addEventListener('pointerup', start);
+    scroller.addEventListener('mouseenter', stop);
+    scroller.addEventListener('mouseleave', start);
+    start();
+  };
+
+  if (window.matchMedia('(max-width: 800px)').matches) {
+    document.querySelectorAll('.carousel').forEach(initCarousel);
+  }
 });
